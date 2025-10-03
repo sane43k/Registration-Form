@@ -16,7 +16,7 @@
       "header": "Основные данные",
       "name": {
         "label": "Имя*",
-        "placeholder": "Напр. Иван Иванов"
+        "placeholder": "Напр. Ivan Ivanov"
       },
       "email": {
         "label": "Email*",
