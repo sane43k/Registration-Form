@@ -1,0 +1,54 @@
+<div class="form-step" [formGroup]="additionalDataForm">
+  <div class="input-row">
+    <app-custom-input
+      type="date"
+      placeholder="Date of birth"
+      formControlName="birthday"
+      (blur)="onBlur()"
+    >
+      Date of birth*
+    </app-custom-input>
+    <app-select
+      name="genderSelection"
+      placeholder="Select your gender"
+      [options]="[
+        { value: 'male', label: 'Male' },
+        { value: 'female', label: 'Female' }
+      ]"
+      formControlName="gender"
+      (blur)="onBlur()"
+    >
+      Gender
+    </app-select>
+  </div>
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      placeholder="Enter your address"
+      formControlName="address"
+      (blur)="onBlur()"
+    >
+      Address
+    </app-custom-input>
+  </div>
+  @if (isMinor) {
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      placeholder="Exp. John Carter"
+      formControlName="representativeName"
+      (blur)="onBlur()"
+    >
+      Legal representative's Name*
+    </app-custom-input>
+    <app-custom-input
+      type="email"
+      placeholder="Enter email"
+      formControlName="representativeEmail"
+      (blur)="onBlur()"
+    >
+      Legal representative's Email*
+    </app-custom-input>
+  </div>
+  }
+</div>

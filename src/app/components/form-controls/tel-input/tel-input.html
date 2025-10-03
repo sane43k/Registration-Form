@@ -1,0 +1,12 @@
+<label>
+  <ng-content></ng-content>
+  <input
+    type="tel"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [value]="value"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+    appTelMask
+  />
+</label>

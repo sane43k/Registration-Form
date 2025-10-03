@@ -1,0 +1,31 @@
+<div class="select-label">
+  <ng-content></ng-content>
+  <div
+    class="select-wrapper"
+    [attr.name]="name"
+    (click)="toggleDropdown()"
+    (blur)="onBlur()"
+  >
+    <div class="select">
+      <div class="select__display" [ngClass]="{ selected: selectedOption }">
+        {{ selectedOption?.label ?? placeholder }}
+      </div>
+      <button
+        type="button"
+        class="btn btn-dropdown"
+        [ngClass]="{ open: isDropdownOpen }"
+      ></button>
+    </div>
+    <div class="dropdown" [ngClass]="{ open: isDropdownOpen }">
+      @for (option of options; track $index) {
+      <div
+        class="dropdown__item"
+        (click)="selectOption(option, $event)"
+        [ngClass]="{ selected: option.value === selectedOption?.value }"
+      >
+        {{ option.label }}
+      </div>
+      }
+    </div>
+  </div>
+</div>

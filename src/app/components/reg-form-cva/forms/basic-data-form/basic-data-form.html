@@ -1,0 +1,38 @@
+<div class="form-step" [formGroup]="basicDataForm">
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      placeholder="Exp. John Carter"
+      formControlName="name"
+      (blur)="onBlur()"
+    >
+      Name*
+    </app-custom-input>
+    <app-custom-input
+      type="email"
+      placeholder="Enter your email"
+      formControlName="email"
+      (blur)="onBlur()"
+    >
+      Email*
+    </app-custom-input>
+  </div>
+  <div class="input-row">
+    <app-select
+      name="countrySelection"
+      placeholder="Select your country"
+      [options]="countriesOptions"
+      formControlName="country"
+      (blur)="onBlur()"
+    >
+      Country*
+    </app-select>
+    <app-tel-input
+      placeholder="+375 (__) ___-__-__"
+      formControlName="tel"
+      (blur)="onBlur()"
+    >
+      Phone number
+    </app-tel-input>
+  </div>
+</div>

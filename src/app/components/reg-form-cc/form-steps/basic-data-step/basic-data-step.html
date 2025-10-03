@@ -1,0 +1,34 @@
+<div class="form-step" formGroupName="basicData">
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      [placeholder]="'registration.basicData.name.placeholder' | translate"
+      formControlName="name"
+    >
+      {{ "registration.basicData.name.label" | translate }}
+    </app-custom-input>
+    <app-custom-input
+      type="email"
+      [placeholder]="'registration.basicData.email.placeholder' | translate"
+      formControlName="email"
+    >
+      {{ "registration.basicData.email.label" | translate }}
+    </app-custom-input>
+  </div>
+  <div class="input-row">
+    <app-select
+      name="countrySelection"
+      [placeholder]="'registration.basicData.country.placeholder' | translate"
+      [options]="translatedCountriesOptions"
+      formControlName="country"
+    >
+      {{ "registration.basicData.country.label" | translate }}
+    </app-select>
+    <app-tel-input
+      [placeholder]="'registration.basicData.tel.placeholder' | translate"
+      formControlName="tel"
+    >
+      {{ "registration.basicData.tel.label" | translate }}
+    </app-tel-input>
+  </div>
+</div>

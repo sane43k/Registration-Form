@@ -1,0 +1,63 @@
+.btn {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 115%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &-primary {
+    color: var(--neutral-800);
+    background: var(--white-gradient);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--neutral-400);
+    border-radius: 12px;
+    padding: 18px 20px;
+    gap: 8px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 1;
+      transition: all 0s;
+    }
+    &:disabled {
+      opacity: 0.6;
+    }
+    &.fixed-size {
+      height: 58px;
+      width: 150px;
+    }
+    &-purple {
+      color: var(--white);
+      background: var(--purple-gradient);
+      border: 1px solid var(--purple-300);
+    }
+  }
+  &-dropdown {
+    height: 30px;
+    width: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--neutral-400);
+    border-radius: 50%;
+    background-image: url(../images/dropdown_black.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: var(--neutral-200);
+    }
+    &:active {
+      background-color: var(--neutral-300);
+      transition: background-color 0s;
+    }
+    &:disabled {
+      opacity: 0.6;
+    }
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+}

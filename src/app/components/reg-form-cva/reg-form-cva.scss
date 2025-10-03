@@ -1,0 +1,36 @@
+.registration-form {
+  height: 530px;
+  width: 660px;
+  padding: 48px;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--neutral-300);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+:host ::ng-deep {
+  .form-step {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    &.step-zero {
+      justify-content: center;
+    }
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}

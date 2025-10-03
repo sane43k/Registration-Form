@@ -1,0 +1,11 @@
+<div class="form-step" [formGroup]="rulesConfirmationForm">
+  <app-checkbox formControlName="agreement" (blur)="onBlur()">
+    I accept the terms of the user agreement
+  </app-checkbox>
+  <app-checkbox formControlName="personalData" (blur)="onBlur()">
+    I agree to the processing of personal data
+  </app-checkbox>
+  <app-checkbox formControlName="newsletter" (blur)="onBlur()">
+    Subscribe to the newsletter
+  </app-checkbox>
+</div>

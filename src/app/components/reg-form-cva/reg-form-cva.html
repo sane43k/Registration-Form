@@ -1,0 +1,81 @@
+<form class="registration-form" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+  @if (currentStep === 0) {
+  <h2>Create a new account</h2>
+  <div class="form-step step-zero">
+    <button
+      type="button"
+      class="btn btn-primary btn-primary-purple"
+      (click)="getSocialNetworksInfo()"
+    >
+      Continue with social networks
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="onChangeStep('next')"
+    >
+      Continue with email
+    </button>
+  </div>
+  } @if (currentStep === 1) {
+  <h2>Basic data</h2>
+  <app-basic-data-form formControlName="basicData"></app-basic-data-form>
+  } @if (currentStep === 2) {
+  <h2>Additional data</h2>
+  <app-additional-data-form
+    formControlName="additionalData"
+  ></app-additional-data-form>
+  } @if (currentStep === 3) {
+  <h2>Rules confirmation</h2>
+  <app-rules-confirmation-form
+    formControlName="rulesConfirmation"
+  ></app-rules-confirmation-form>
+  }
+
+  <!-- <h2 [hidden]="currentStep != 1">Basic data</h2>
+  <app-basic-data-form
+    [hidden]="currentStep != 1"
+    formControlName="basicData"
+  ></app-basic-data-form>
+
+  <h2 [hidden]="currentStep != 2">Additional data</h2>
+  <app-additional-data-form
+    [hidden]="currentStep != 2"
+    formControlName="additionalData"
+  ></app-additional-data-form>
+
+  <h2 [hidden]="currentStep != 3">Rules confirmation</h2>
+  <app-rules-confirmation-form
+    [hidden]="currentStep != 3"
+    formControlName="rulesConfirmation"
+  ></app-rules-confirmation-form> -->
+
+  <div class="buttons-wrapper">
+    @if (currentStep > 0 && currentStep < 4) {
+    <button
+      type="button"
+      class="btn btn-primary fixed-size"
+      (click)="onChangeStep('prev')"
+    >
+      Back
+    </button>
+    } @if (currentStep > 0 && currentStep < 3) {
+    <button
+      type="button"
+      class="btn btn-primary btn-primary-purple fixed-size"
+      [disabled]="isStepInvalid"
+      (click)="onChangeStep('next')"
+    >
+      Continue
+    </button>
+    } @if (currentStep === 3) {
+    <button
+      type="submit"
+      class="btn btn-primary btn-primary-purple fixed-size"
+      [disabled]="isStepInvalid"
+    >
+      Submit
+    </button>
+    }
+  </div>
+</form>

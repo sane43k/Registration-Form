@@ -1,0 +1,66 @@
+<div class="form-step" formGroupName="additionalData">
+  <div class="input-row">
+    <app-custom-input
+      type="date"
+      [placeholder]="
+        'registration.additionalData.birthday.placeholder' | translate
+      "
+      formControlName="birthday"
+    >
+      {{ "registration.additionalData.birthday.label" | translate }}
+    </app-custom-input>
+    <app-select
+      name="genderSelection"
+      [placeholder]="
+        'registration.additionalData.gender.placeholder' | translate
+      "
+      [options]="[
+        {
+          value: 'male',
+          label: 'registration.additionalData.gender.options.male' | translate
+        },
+        {
+          value: 'female',
+          label: 'registration.additionalData.gender.options.female' | translate
+        }
+      ]"
+      formControlName="gender"
+    >
+      {{ "registration.additionalData.gender.label" | translate }}
+    </app-select>
+  </div>
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      [placeholder]="
+        'registration.additionalData.address.placeholder' | translate
+      "
+      formControlName="address"
+    >
+      {{ "registration.additionalData.address.label" | translate }}
+    </app-custom-input>
+  </div>
+  @if (isMinor) {
+  <div class="input-row">
+    <app-custom-input
+      type="text"
+      [placeholder]="
+        'registration.additionalData.representativeName.placeholder' | translate
+      "
+      formControlName="representativeName"
+    >
+      {{ "registration.additionalData.representativeName.label" | translate }}
+    </app-custom-input>
+    <app-custom-input
+      type="email"
+      [placeholder]="
+        'registration.additionalData.representativeEmail.placeholder'
+          | translate
+      "
+      formControlName="representativeEmail"
+    >
+      {{ "registration.additionalData.representativeEmail.label" | translate }}
+    </app-custom-input>
+  </div>
+  }
+</div>

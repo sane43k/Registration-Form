@@ -1,0 +1,170 @@
+{
+  "registration": {
+    "navigation": {
+      "back": "Back",
+      "continue": "Continue",
+      "submit": "Submit"
+    },
+
+    "initialStep": {
+      "createAccount": "Create a new account {{name}}",
+      "continueWithNetworks": "Continue with social networks",
+      "continueWithEmail": "Continue with email"
+    },
+
+    "basicData": {
+      "header": "Basic data",
+      "name": {
+        "label": "Name*",
+        "placeholder": "Exp. John Carter"
+      },
+      "email": {
+        "label": "Email*",
+        "placeholder": "Enter your email"
+      },
+      "country": {
+        "label": "Country*",
+        "placeholder": "Select your country",
+        "options": {
+          "af": "Afghanistan",
+          "al": "Albania",
+          "dz": "Algeria",
+          "ad": "Andorra",
+          "ao": "Angola",
+          "ar": "Argentina",
+          "am": "Armenia",
+          "au": "Australia",
+          "at": "Austria",
+          "az": "Azerbaijan",
+          "bh": "Bahrain",
+          "bd": "Bangladesh",
+          "by": "Belarus",
+          "be": "Belgium",
+          "bz": "Belize",
+          "bj": "Benin",
+          "bo": "Bolivia",
+          "ba": "Bosnia and Herzegovina",
+          "br": "Brazil",
+          "bg": "Bulgaria",
+          "ca": "Canada",
+          "cl": "Chile",
+          "cn": "China",
+          "co": "Colombia",
+          "cr": "Costa Rica",
+          "hr": "Croatia",
+          "cu": "Cuba",
+          "cy": "Cyprus",
+          "cz": "Czech Republic",
+          "dk": "Denmark",
+          "do": "Dominican Republic",
+          "ec": "Ecuador",
+          "eg": "Egypt",
+          "ee": "Estonia",
+          "fi": "Finland",
+          "fr": "France",
+          "ge": "Georgia",
+          "de": "Germany",
+          "gr": "Greece",
+          "hu": "Hungary",
+          "is": "Iceland",
+          "in": "India",
+          "id": "Indonesia",
+          "ir": "Iran",
+          "iq": "Iraq",
+          "ie": "Ireland",
+          "il": "Israel",
+          "it": "Italy",
+          "jp": "Japan",
+          "jo": "Jordan",
+          "kz": "Kazakhstan",
+          "ke": "Kenya",
+          "kr": "South Korea",
+          "kg": "Kyrgyzstan",
+          "lv": "Latvia",
+          "lb": "Lebanon",
+          "lt": "Lithuania",
+          "lu": "Luxembourg",
+          "my": "Malaysia",
+          "mx": "Mexico",
+          "md": "Moldova",
+          "mc": "Monaco",
+          "mn": "Mongolia",
+          "ma": "Morocco",
+          "np": "Nepal",
+          "nl": "Netherlands",
+          "nz": "New Zealand",
+          "ng": "Nigeria",
+          "no": "Norway",
+          "pk": "Pakistan",
+          "pa": "Panama",
+          "py": "Paraguay",
+          "pe": "Peru",
+          "ph": "Philippines",
+          "pl": "Poland",
+          "pt": "Portugal",
+          "qa": "Qatar",
+          "ro": "Romania",
+          "ru": "Russia",
+          "sa": "Saudi Arabia",
+          "rs": "Serbia",
+          "sg": "Singapore",
+          "sk": "Slovakia",
+          "si": "Slovenia",
+          "za": "South Africa",
+          "es": "Spain",
+          "se": "Sweden",
+          "ch": "Switzerland",
+          "th": "Thailand",
+          "tr": "Turkey",
+          "ua": "Ukraine",
+          "ae": "United Arab Emirates",
+          "gb": "United Kingdom",
+          "us": "United States",
+          "uy": "Uruguay",
+          "uz": "Uzbekistan",
+          "ve": "Venezuela",
+          "vn": "Vietnam"
+        }
+      },
+      "tel": {
+        "label": "Phone number",
+        "placeholder": "+375 (__) ___-__-__"
+      }
+    },
+
+    "additionalData": {
+      "header": "Additional data",
+      "birthday": {
+        "label": "Date of birth*",
+        "placeholder": "Select your date of birth"
+      },
+      "gender": {
+        "label": "Gender*",
+        "placeholder": "Select your gender",
+        "options": {
+          "male": "Male",
+          "female": "Female"
+        }
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "Enter your address"
+      },
+      "representativeName": {
+        "label": "Legal representative's Name*",
+        "placeholder": "Exp. John Carter"
+      },
+      "representativeEmail": {
+        "label": "Legal representative's Email*",
+        "placeholder": "Enter email"
+      }
+    },
+
+    "rulesConfirmation": {
+      "header": "Rules confirmation",
+      "agreement": "I accept the terms of the user agreement",
+      "personalData": "I agree to the processing of personal data",
+      "newsletter": "Subscribe to the newsletter"
+    }
+  }
+}

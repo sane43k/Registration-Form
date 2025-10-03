@@ -1,0 +1,12 @@
+<label class="check">
+  <input
+    type="checkbox"
+    class="check__input"
+    [checked]="checked"
+    [disabled]="disabled"
+    (change)="toggleChecked()"
+    (blur)="onBlur()"
+  />
+  <span class="check__box"></span>
+  <ng-content></ng-content>
+</label>

@@ -1,0 +1,67 @@
+<form class="registration-form" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+  @if (currentStep === 0) {
+  <h2>
+    {{
+      "registration.initialStep.createAccount" | translate : { name: userName }
+    }}
+  </h2>
+  <div class="form-step step-zero">
+    <button
+      type="button"
+      class="btn btn-primary btn-primary-purple"
+      (click)="getSocialNetworksInfo()"
+    >
+      {{ "registration.initialStep.continueWithNetworks" | translate }}
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="onChangeStep('next')"
+    >
+      {{ "registration.initialStep.continueWithEmail" | translate }}
+    </button>
+  </div>
+  } @if (currentStep === 1) {
+  <h2>{{ "registration.basicData.header" | translate }}</h2>
+  <app-basic-data-step formGroupName="basicData"></app-basic-data-step>
+  } @if (currentStep === 2) {
+  <h2>{{ "registration.additionalData.header" | translate }}</h2>
+  <app-additional-data-step
+    formGroupName="additionalData"
+  ></app-additional-data-step>
+  } @if (currentStep === 3) {
+  <h2>{{ "registration.rulesConfirmation.header" | translate }}</h2>
+  <app-rules-confirmation-step
+    formGroupName="rulesConfirmation"
+  ></app-rules-confirmation-step>
+  }
+
+  <div class="buttons-wrapper">
+    @if (currentStep > 0 && currentStep < 4) {
+    <button
+      type="button"
+      class="btn btn-primary fixed-size"
+      (click)="onChangeStep('prev')"
+    >
+      {{ "registration.navigation.back" | translate }}
+    </button>
+    } @if (currentStep > 0 && currentStep < 3) {
+    <button
+      type="button"
+      class="btn btn-primary btn-primary-purple fixed-size"
+      [disabled]="isStepInvalid"
+      (click)="onChangeStep('next')"
+    >
+      {{ "registration.navigation.continue" | translate }}
+    </button>
+    } @if (currentStep === 3) {
+    <button
+      type="submit"
+      class="btn btn-primary btn-primary-purple fixed-size"
+      [disabled]="isStepInvalid"
+    >
+      {{ "registration.navigation.submit" | translate }}
+    </button>
+    }
+  </div>
+</form>
